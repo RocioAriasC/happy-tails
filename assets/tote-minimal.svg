@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title id="title">Minimalist closing gift tote</title>
+  <desc id="desc">A warm terracotta tote with a small star detail on a soft sage circle.</desc>
+  <circle cx="275" cy="255" r="190" fill="#dce8dc"/>
+  <path d="M170 205c0-74 43-112 105-112s105 38 105 112" fill="none" stroke="#8ca88e" stroke-width="18" stroke-linecap="round"/>
+  <path d="M128 190h294l-20 228H148z" fill="#ef816d"/>
+  <path d="M128 190h294l-20 228H148z" fill="none" stroke="#d96255" stroke-width="5"/>
+  <path d="M165 235h220" stroke="#f6aa92" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+  <path d="m275 275 8 20 21 2-16 14 5 21-18-11-18 11 5-21-16-14 21-2z" fill="#fff5e6"/>
+  <circle cx="124" cy="164" r="10" fill="#e9b85f"/>
+  <circle cx="407" cy="142" r="7" fill="#ef816d"/>
+</svg>
