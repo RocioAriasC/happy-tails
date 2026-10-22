@@ -167,6 +167,32 @@
             <p class="summary-count"><span id="selection-count">0</span> <span id="selection-word">items</span></p>
             <p id="selection-message" class="selection-message">Choose a tote to get started.</p>
             <a id="inquiry-link" class="button button-light" href="#gifts">Choose a gift <span aria-hidden="true">→</span></a>
+            <form id="inquiry-form" class="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" hidden>
+              <input type="hidden" id="selected-gifts" name="selected_gifts" />
+              <label>
+                Your name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email address
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                Phone number <span>(optional)</span>
+                <input type="tel" name="phone" autocomplete="tel" />
+              </label>
+              <label>
+                Date needed
+                <input type="date" name="date_needed" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4" placeholder="Tell us a little about the closing or client."></textarea>
+              </label>
+              <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <button class="button button-light" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
+              <p class="form-note">We’ll respond within 2 business days.</p>
+            </form>
           </div>
         </div>
       </section>

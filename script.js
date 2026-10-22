@@ -35,6 +35,8 @@
   const selectionWord = document.querySelector("#selection-word");
   const selectionMessage = document.querySelector("#selection-message");
   const inquiryLink = document.querySelector("#inquiry-link");
+  const inquiryForm = document.querySelector("#inquiry-form");
+  const selectedGiftsInput = document.querySelector("#selected-gifts");
   const menuToggle = document.querySelector(".menu-toggle");
   const siteNav = document.querySelector("#site-nav");
   const selectedProducts = new Set();
@@ -71,6 +73,10 @@
       : "Your selections are ready to share with us.";
     inquiryLink.href = count === 0 ? "#gifts" : "#inquiry";
     inquiryLink.textContent = count === 0 ? "Choose a gift →" : "Inquiry selections ready →";
+    selectedGiftsInput.value = products
+      .filter(function (product) { return selectedProducts.has(product.id); })
+      .map(function (product) { return product.name; })
+      .join(", ");
   }
 
   productGrid.addEventListener("click", function (event) {
@@ -95,6 +101,14 @@
       button.classList.add("is-active");
       renderProducts(button.getAttribute("data-filter"));
     });
+  });
+
+  inquiryLink.addEventListener("click", function (event) {
+    if (selectedProducts.size === 0) return;
+
+    event.preventDefault();
+    inquiryForm.hidden = false;
+    inquiryForm.querySelector("input[name='name']").focus();
   });
 
   menuToggle.addEventListener("click", function () {
